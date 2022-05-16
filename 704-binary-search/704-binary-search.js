@@ -7,7 +7,7 @@ var search = function(nums, target) {
 let left = 0; 
 let right = nums.length - 1;
     
-    while(left <= right){
+    while(left <= right){ 
       const mid = Math.floor((left + right)/2);
         if(nums[mid] == target){
             return mid ; 
@@ -19,3 +19,5 @@ let right = nums.length - 1;
     }
     return -1;
 };
+ //time complexity O(log n)
+//Space complexity O(n)
