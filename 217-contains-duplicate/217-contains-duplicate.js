@@ -13,13 +13,11 @@
 
 
 var containsDuplicate = function(nums) {
-nums.sort(); //o(n log n )
-    
-    
-    for(let i = 0; i <nums.length; i++){  //o(n)
-        if(nums[i] === nums[i + 1]) return true; //o(1)
+nums.sort(); 
+    for(let i = 0; i <nums.length; i++){  
+        if(nums[i] === nums[i + 1]) return true;
     }
-    return false; //o(n)
+    return false;
 };
 
 
