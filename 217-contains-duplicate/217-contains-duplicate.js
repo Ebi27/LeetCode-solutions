@@ -23,5 +23,5 @@ nums.sort(); //o(n log n )
 };
 
 
-//time complexity o(n log n)
+//time complexity o(log n)
 //space complexity O(1) - we maintained the same space 
