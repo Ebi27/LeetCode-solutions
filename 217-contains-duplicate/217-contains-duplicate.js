@@ -3,23 +3,21 @@
  * @return {boolean}
  */
 
-
-// sort the numbers 
-//unsorted = [1,2,3,1]
-//sorted = [1,1,2,3]
-//loop through the sorted nums 
-// take our first element and check if its equal to our second element 
-// if it is, then we return true , else false 
+//sort nums 
+//check if the value at first index is same as the next through the array
+//return true if yes and false if not 
 
 
 var containsDuplicate = function(nums) {
-nums.sort(); 
-    for(let i = 0; i <nums.length; i++){  
-        if(nums[i] === nums[i + 1]) return true;
+    nums.sort();
+    
+    for(let i = 0; i < nums.length; i++){
+        if(nums[i] === nums[i + 1]){
+            return true;
+        }
     }
     return false;
 };
 
-
-//time complexity o(log n)
-//space complexity O(1) - we maintained the same space 
+//TC = O(N)
+//SC = O(1)
