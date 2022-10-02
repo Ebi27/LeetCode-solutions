@@ -8,10 +8,9 @@
 //create empty array 
 //loop over the main array 
 //declare a new variable and split, sort, and join string
-//
 
     
- const groupAnagrams = function(strs) {
+ const groupAnagrams = function(strs) { 
     let groups = {}
     strs.forEach(str => {
         const sortedStr = str.split('').sort().join('')
