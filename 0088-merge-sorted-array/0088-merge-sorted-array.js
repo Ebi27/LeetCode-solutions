@@ -19,13 +19,16 @@
 //
 
 var merge = function(nums1, m, nums2, n) {
-    let t2 = 0; 
-   for(let i = 0; i < nums1.length; i++){
-       if(i + 1 > m){
-           nums1[i] = nums2[t2];
+    let t2 = 0;  
+   for(let i = 0; i < nums1.length; i++){ 
+       if(i + 1 > m){ 
+           nums1[i] = nums2[t2]; 
            console.log(nums2[t2])
            t2++
        }
    }
     return nums1.sort((a, b) => a - b);   
 };
+
+//TC = O(n log n)
+//SC = O(1)
