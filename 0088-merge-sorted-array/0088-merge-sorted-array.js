@@ -18,9 +18,7 @@
 //sort it 
 //
 
-
 var merge = function(nums1, m, nums2, n) {
-    let removedNum = 0;
     let t2 = 0; 
    for(let i = 0; i < nums1.length; i++){
        if(i + 1 > m){
