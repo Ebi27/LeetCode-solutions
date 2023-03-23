@@ -3,26 +3,28 @@
  * @return {boolean}
  */
 
-//remove all spaces and special characters characters 
-// change all to lower case 
-// loop through s backwards and forward
-// check if they are the same 
-// return false otherwise 
-// increment forward, decrement backward 
-//return true 
+//initialize two pointers one starting at the begining and the other at the end of the a end 
+//remove all spaces and non-alphabets 
+//turn the new string into lower letter 
+//loop through and return true if they match 
+//return false ifyou come across any mismatch 
+
 
 var isPalindrome = function(s) {
-s = s.replace(/[^a-zA-Z0-9]/g, '');
-  s = s.toLowerCase();
+  s = s.replace(/[^a-z0-9]/gi, '')
+    s = s.toLowerCase()
     
-    for(let [i, j] = [0, s.length-1]; i < j;){
-        if(s[i] !== s[j]){
+    let start = 0; 
+    let end = s.length-1;
+    
+    while(start < end){
+        if(s[start] !== s[end]){ 
             return false;
-        }
-        i++;
-        j--;
+    } else {
+        start++
+        end-- 
+    }
     }
     return true;
-}
-
-
+    console.log(s)
+};
