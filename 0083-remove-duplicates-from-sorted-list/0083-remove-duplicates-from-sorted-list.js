@@ -11,12 +11,6 @@
  */
 var deleteDuplicates = function(head) {
     
-    // set a while loop to iterate through 
-    //it breaks when it gets to the end 
-    //push our head to next 
-    // prev = head 
-    // condition 
-    
     let curr = head;
     while(curr !== null){
         if(curr.next !== null && curr.next.val == curr.val){
