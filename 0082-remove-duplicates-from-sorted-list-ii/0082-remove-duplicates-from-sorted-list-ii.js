@@ -20,6 +20,6 @@ return current;
 }
     
 let itr = current.next;
-while(itr!=null && itr.val==current.val) itr = itr.next;
+while(itr != null && itr.val == current.val) itr = itr.next;
 return deleteDuplicates(itr);
 };
