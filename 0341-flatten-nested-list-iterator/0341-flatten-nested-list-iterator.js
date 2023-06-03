@@ -28,20 +28,23 @@
  * @constructor
  * @param {NestedInteger[]} nestedList
  */
+ // [[1, 2], 5, [[8, 9]]]
+ // [1, 2, 5, 8, 9]
 var NestedIterator = function(nestedList) {
-    this.stack = [] // results
+    this.stack = []
     this.flatten(nestedList)
 };
 
-NestedIterator.prototype.flatten = function(arr){
-    for (item of arr){
-        if(item.isInteger()){ // return true of item is an integer
-            this.stack.push(item.getInteger()) // returns the integer
+NestedIterator.prototype.flatten = function(list) {
+    for(let item of list){
+        if(item.isInteger()){
+            this.stack.push(item.getInteger())
         } else {
-            this.flatten(item.getList()) // calls the flattens function
+            this.flatten(item.getList())
         }
     }
 }
+
 
 /**
  * @this NestedIterator
@@ -56,7 +59,7 @@ NestedIterator.prototype.hasNext = function() {
  * @returns {integer}
  */
 NestedIterator.prototype.next = function() {
-   return this.stack.shift()
+    return this.stack.shift()
 };
 
 /**
@@ -64,29 +67,3 @@ NestedIterator.prototype.next = function() {
  * var i = new NestedIterator(nestedList), a = [];
  * while (i.hasNext()) a.push(i.next());
 */
-
-
-// const myClass = new NestedIterator(1)
-// myClass.next() => 1
-// myClass.hasNext() => false
-
-// 1
-// [1, 2] => getList() => [1, 2].shift() => 1
-// [[1, 2], [[[3, 4]]], 5] => getList() => [1, 2, [3, 4], 5]
-// Array.isArray(arr) // return true | false
-
-/*
-    const arr = [[1, 2], [[[3, 4]]], 5]
-    const ourIterator = new NestedIterator(arr)
-    
-    ourIterator.hasNext() // return true
-    // arr = [1, 2, [[3, 4]], 5]
-
-    ourIterator.hasNext() // return true
-    // arr = [1, 2, [3, 4], 5]
-
-    ourIterator.hasNext() // return true
-    // arr = [1, 2, 3, 4, 5]  
-
-    ourIterator.hasNext() // return false
- */
