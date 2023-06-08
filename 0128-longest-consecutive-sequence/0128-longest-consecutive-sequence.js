@@ -24,10 +24,10 @@ update the max count and reset the curr count
 */
 
 var longestConsecutive = function(nums) {
-    if(nums.length == 0){
+    if(nums.length == 0){ 
         return 0
     }
-   nums.sort((a,b) => a - b)
+   nums.sort((a,b) => a - b) 
     console.log(nums)
     let maxCount = 1, currCount = 1
     
@@ -47,3 +47,5 @@ var longestConsecutive = function(nums) {
 };
 
 
+//TC = O(n log n) due to sorting 
+//SC = O(1)
