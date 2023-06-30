@@ -32,6 +32,7 @@ var isAnagram = function(s, t) {
     for(let i = 0; i < s.length; i++){ //On 
         let letter = s[i];   //o(1)
         lookup[letter] ? lookup[letter] += 1 :lookup[letter] = 1;// o(1)
+        
     }
 
     for(let i = 0; i < t.length; i++){ //o(n)
