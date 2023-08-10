@@ -3,7 +3,9 @@
  * @return {boolean}
  */
 // sort array 
-//filter the arr 
+//check if num in one index is same as num in the next array 
+//return true if yes 
+// iterate completely through the arr and return false if not 
 
 var containsDuplicate = function(nums) {
     nums.sort()
@@ -17,3 +19,5 @@ var containsDuplicate = function(nums) {
 };
 
 
+//tc = o(n)
+//sc = o(1)
