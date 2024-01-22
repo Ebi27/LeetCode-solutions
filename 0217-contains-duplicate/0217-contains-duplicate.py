@@ -14,12 +14,13 @@ class Solution(object):
             If none meet the duplicate check condition, then we have no duplicate. We return true. 
         """
         
-        dict = {}
-        
+        hashmap = {}
         for num in nums:
-            if num in dict:
-                return True
-            elif not num in dict:
-                dict[num] = 1
+            if num in hashmap:
+               return True
         
-        return False
+            else:
+                hashmap[num] = 1 
+                
+        return False 
+            
